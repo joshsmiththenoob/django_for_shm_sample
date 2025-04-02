@@ -1,0 +1,24 @@
+{
+    "name": "Django Devcontainer",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": ".."
+    },
+    "settings": {
+      "python.defaultInterpreterPath": "/usr/local/bin/python"
+    },
+    "extensions": [
+      "ms-python.python",
+      "ms-toolsai.jupyter",
+      "esbenp.prettier-vscode"
+    ],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "root",
+    "forwardPorts": [8000],
+    "portsAttributes": {
+      "8000": {
+        "label": "Django Server"
+      }
+    }
+  }
+  
